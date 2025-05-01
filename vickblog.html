@@ -1,180 +1,164 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #666;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      padding: 0.5rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .comment-section {
+      margin-top: 1rem;
+    }
+    .comment {
+      background-color: #eee;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;My Personal Blog&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f9f9f9;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form input, form textarea {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.comment-section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.comment {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #eee;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Welcome to My Blog&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#about"&gt;About Me&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#track"&gt;Track &amp; Field&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#theater"&gt;Theater&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#music"&gt;Music Covers&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#service"&gt;Service &amp; Community&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;About Me&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Hi! I'm passionate about track and field, theater, music, and giving back to the community. This blog is a space to share my experiences and thoughts across these areas.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="track"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Track &amp; Field&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I love running and competing. Here, I’ll share my training routines, competition stories, and tips!&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="comment-section" id="track-comments"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;form onsubmit="addComment(event, 'track')"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" placeholder="Your name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea placeholder="Your comment" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Post Comment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="theater"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Theater&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Acting helps me express myself creatively. I post reflections on performances, rehearsals, and scripts I love.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="comment-section" id="theater-comments"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;form onsubmit="addComment(event, 'theater')"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" placeholder="Your name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea placeholder="Your comment" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Post Comment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="music"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Music Covers&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I enjoy singing and playing instruments. Check out posts on my favorite covers and musical inspirations.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="comment-section" id="music-comments"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;form onsubmit="addComment(event, 'music')"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" placeholder="Your name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea placeholder="Your comment" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Post Comment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="service"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Service &amp; Community&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Making a difference matters to me. I’ll share service projects and reflections on giving back.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="comment-section" id="service-comments"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;form onsubmit="addComment(event, 'service')"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" placeholder="Your name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea placeholder="Your comment" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Post Comment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contact Me&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;form onsubmit="event.preventDefault(); alert('Message sent!');"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" placeholder="Your name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" placeholder="Your email" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea placeholder="Your message" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Send&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function addComment(event, sectionId) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>event.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const form = event.target;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const name = form[0].value;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const comment = form[1].value;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const commentBox = document.getElementById(sectionId + '-comments');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const newComment = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>newComment.className = 'comment';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>newComment.innerHTML = `&lt;strong&gt;${name}&lt;/strong&gt;&lt;br&gt;${comment}`;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>commentBox.appendChild(newComment);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>form.reset();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <header>
+    <h1>Welcome to My Blog</h1>
+  </header>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#track">Track & Field</a>
+    <a href="#theater">Theater</a>
+    <a href="#music">Music Covers</a>
+    <a href="#service">Service & Community</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm passionate about track and field, theater, music, and giving back to the community. This blog is a space to share my experiences and thoughts across these areas.</p>
+    </section>
+
+    <section id="track">
+      <h2>Track & Field</h2>
+      <p>I love running and competing. Here, I’ll share my training routines, competition stories, and tips!</p>
+      <div class="comment-section" id="track-comments"></div>
+      <form onsubmit="addComment(event, 'track')">
+        <input type="text" placeholder="Your name" required />
+        <textarea placeholder="Your comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+
+    <section id="theater">
+      <h2>Theater</h2>
+      <p>Acting helps me express myself creatively. I post reflections on performances, rehearsals, and scripts I love.</p>
+      <div class="comment-section" id="theater-comments"></div>
+      <form onsubmit="addComment(event, 'theater')">
+        <input type="text" placeholder="Your name" required />
+        <textarea placeholder="Your comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+
+    <section id="music">
+      <h2>Music Covers</h2>
+      <p>I enjoy singing and playing instruments. Check out posts on my favorite covers and musical inspirations.</p>
+      <div class="comment-section" id="music-comments"></div>
+      <form onsubmit="addComment(event, 'music')">
+        <input type="text" placeholder="Your name" required />
+        <textarea placeholder="Your comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+
+    <section id="service">
+      <h2>Service & Community</h2>
+      <p>Making a difference matters to me. I’ll share service projects and reflections on giving back.</p>
+      <div class="comment-section" id="service-comments"></div>
+      <form onsubmit="addComment(event, 'service')">
+        <input type="text" placeholder="Your name" required />
+        <textarea placeholder="Your comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form onsubmit="event.preventDefault(); alert('Message sent!');">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    function addComment(event, sectionId) {
+      event.preventDefault();
+      const form = event.target;
+      const name = form[0].value;
+      const comment = form[1].value;
+      const commentBox = document.getElementById(sectionId + '-comments');
+      const newComment = document.createElement('div');
+      newComment.className = 'comment';
+      newComment.innerHTML = `<strong>${name}</strong><br>${comment}`;
+      commentBox.appendChild(newComment);
+      form.reset();
+    }
+  </script>
 </body>
 </html>
